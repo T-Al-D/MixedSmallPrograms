@@ -37,6 +37,7 @@
             this.diamodListBox = new System.Windows.Forms.ListBox();
             this.clearBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NumInputBox
@@ -110,9 +111,9 @@
             // 
             this.diamodListBox.FormattingEnabled = true;
             this.diamodListBox.ItemHeight = 19;
-            this.diamodListBox.Location = new System.Drawing.Point(414, 31);
+            this.diamodListBox.Location = new System.Drawing.Point(417, 12);
             this.diamodListBox.Name = "diamodListBox";
-            this.diamodListBox.Size = new System.Drawing.Size(623, 479);
+            this.diamodListBox.Size = new System.Drawing.Size(623, 517);
             this.diamodListBox.TabIndex = 5;
             // 
             // clearBtn
@@ -140,14 +141,32 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(256, 19);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Input number between 0 and 40 !";
+            this.label1.Text = "Input number between 0 and 42 !";
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.Red;
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exitBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.exitBtn.FlatAppearance.BorderSize = 3;
+            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exitBtn.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.exitBtn.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.exitBtn.Location = new System.Drawing.Point(147, 12);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(68, 38);
+            this.exitBtn.TabIndex = 8;
+            this.exitBtn.Text = "EXIT";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
             // DiamondView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(1061, 541);
+            this.ClientSize = new System.Drawing.Size(1061, 551);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.diamodListBox);
@@ -176,5 +195,6 @@
         private ListBox diamodListBox;
         private Button clearBtn;
         private Label label1;
+        private Button exitBtn;
     }
 }

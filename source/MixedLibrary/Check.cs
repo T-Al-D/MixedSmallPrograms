@@ -1,6 +1,8 @@
-﻿namespace MixedLibrary
+﻿using System;
+
+namespace MixedLibrary
 {
-    public class Check
+    public static class Check
     {
         // Method checks for a valid number! If num valid but negative, it´s converted into positive!
         // else Method returns -1 !
