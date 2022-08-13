@@ -38,6 +38,7 @@
             this.numInputBox = new System.Windows.Forms.TextBox();
             this.explanation2 = new System.Windows.Forms.Label();
             this.secondMethodCheckBox = new System.Windows.Forms.CheckBox();
+            this.actionLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // exitBtn
@@ -80,7 +81,7 @@
             this.hotNColdListBox.ItemHeight = 19;
             this.hotNColdListBox.Location = new System.Drawing.Point(483, 12);
             this.hotNColdListBox.Name = "hotNColdListBox";
-            this.hotNColdListBox.Size = new System.Drawing.Size(367, 479);
+            this.hotNColdListBox.Size = new System.Drawing.Size(367, 498);
             this.hotNColdListBox.TabIndex = 11;
             // 
             // explanationLbl
@@ -91,10 +92,11 @@
             this.explanationLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.explanationLbl.Location = new System.Drawing.Point(12, 68);
             this.explanationLbl.Name = "explanationLbl";
-            this.explanationLbl.Size = new System.Drawing.Size(440, 44);
+            this.explanationLbl.Size = new System.Drawing.Size(440, 88);
             this.explanationLbl.TabIndex = 12;
             this.explanationLbl.Text = " 1st Method: give the Computer a number to guess !\r\n2nd Method: computer gives nu" +
-    "mber und you have to guess!";
+    "mber und you have to guess!\r\nIf you contine with the 2nd Method you can first cl" +
+    "ick start\r\nwithout number input.";
             // 
             // clearBtn
             // 
@@ -103,7 +105,7 @@
             this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.clearBtn.FlatAppearance.BorderSize = 3;
             this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearBtn.Location = new System.Drawing.Point(208, 458);
+            this.clearBtn.Location = new System.Drawing.Point(208, 477);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(139, 33);
             this.clearBtn.TabIndex = 15;
@@ -120,7 +122,7 @@
             this.startBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.startBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.startBtn.ForeColor = System.Drawing.Color.DarkGreen;
-            this.startBtn.Location = new System.Drawing.Point(12, 458);
+            this.startBtn.Location = new System.Drawing.Point(12, 477);
             this.startBtn.Name = "startBtn";
             this.startBtn.Size = new System.Drawing.Size(167, 33);
             this.startBtn.TabIndex = 14;
@@ -134,7 +136,7 @@
             this.numInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numInputBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.numInputBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numInputBox.Location = new System.Drawing.Point(12, 403);
+            this.numInputBox.Location = new System.Drawing.Point(12, 422);
             this.numInputBox.Margin = new System.Windows.Forms.Padding(4);
             this.numInputBox.Name = "numInputBox";
             this.numInputBox.Size = new System.Drawing.Size(167, 27);
@@ -146,7 +148,7 @@
             this.explanation2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.explanation2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.explanation2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.explanation2.Location = new System.Drawing.Point(12, 128);
+            this.explanation2.Location = new System.Drawing.Point(12, 172);
             this.explanation2.Name = "explanation2";
             this.explanation2.Size = new System.Drawing.Size(296, 22);
             this.explanation2.TabIndex = 16;
@@ -158,19 +160,32 @@
             this.secondMethodCheckBox.BackColor = System.Drawing.Color.DarkOrchid;
             this.secondMethodCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.secondMethodCheckBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.secondMethodCheckBox.Location = new System.Drawing.Point(12, 320);
+            this.secondMethodCheckBox.Location = new System.Drawing.Point(12, 339);
             this.secondMethodCheckBox.Name = "secondMethodCheckBox";
             this.secondMethodCheckBox.Size = new System.Drawing.Size(289, 46);
             this.secondMethodCheckBox.TabIndex = 17;
             this.secondMethodCheckBox.Text = "if this box is checked, the 2nd Method\r\nis active, else the 1st Method !";
             this.secondMethodCheckBox.UseVisualStyleBackColor = false;
             // 
+            // actionLbl
+            // 
+            this.actionLbl.AutoSize = true;
+            this.actionLbl.BackColor = System.Drawing.Color.Blue;
+            this.actionLbl.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.actionLbl.ForeColor = System.Drawing.Color.White;
+            this.actionLbl.Location = new System.Drawing.Point(12, 238);
+            this.actionLbl.Name = "actionLbl";
+            this.actionLbl.Size = new System.Drawing.Size(102, 19);
+            this.actionLbl.TabIndex = 18;
+            this.actionLbl.Text = "Next Action ...";
+            // 
             // HotNColdView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
-            this.ClientSize = new System.Drawing.Size(867, 507);
+            this.ClientSize = new System.Drawing.Size(867, 523);
+            this.Controls.Add(this.actionLbl);
             this.Controls.Add(this.secondMethodCheckBox);
             this.Controls.Add(this.explanation2);
             this.Controls.Add(this.clearBtn);
@@ -199,5 +214,6 @@
         private TextBox numInputBox;
         private Label explanation2;
         private CheckBox secondMethodCheckBox;
+        private Label actionLbl;
     }
 }
