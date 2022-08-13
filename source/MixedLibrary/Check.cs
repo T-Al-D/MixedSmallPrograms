@@ -13,11 +13,11 @@ namespace MixedLibrary
 
             if (validNumber)
             {
-                return Math.Abs(validadedNumber);
+                return validadedNumber;
             }
             else
             {
-                return -1;
+                return int.MinValue;
             }
         }
     }

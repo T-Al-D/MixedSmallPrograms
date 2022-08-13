@@ -28,11 +28,11 @@ namespace GUI
 
         void diamondStartBtn_Click(object sender, EventArgs e)
         {
-            _diamondSize = Check.CheckValidNumber(NumInputBox.Text);
+            _diamondSize = Check.CheckValidNumber(numInputBox.Text);
 
-            if (!(_diamondSize != -1 && _diamondSize > 42))
+            if (_diamondSize > -1 && _diamondSize < 43)
             {
-                NumInputBox.Text = "";
+                numInputBox.Text = "";
 
                 if (InputIsTotalSizeCheckBox.Checked)
                 {
@@ -61,6 +61,7 @@ namespace GUI
             else
             {
                 MessageBox.Show("Input has to be a valid positive Number in the given range!");
+                numInputBox.Clear();
             }
         }
 

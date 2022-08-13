@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DiamondView));
-            this.NumInputBox = new System.Windows.Forms.TextBox();
+            this.numInputBox = new System.Windows.Forms.TextBox();
             this.returnBtn = new System.Windows.Forms.Button();
             this.diamondStartBtn = new System.Windows.Forms.Button();
             this.InputIsTotalSizeCheckBox = new System.Windows.Forms.CheckBox();
@@ -40,17 +40,17 @@
             this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // NumInputBox
+            // numInputBox
             // 
-            this.NumInputBox.BackColor = System.Drawing.SystemColors.Window;
-            this.NumInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NumInputBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumInputBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.NumInputBox.Location = new System.Drawing.Point(12, 409);
-            this.NumInputBox.Margin = new System.Windows.Forms.Padding(4);
-            this.NumInputBox.Name = "NumInputBox";
-            this.NumInputBox.Size = new System.Drawing.Size(167, 26);
-            this.NumInputBox.TabIndex = 0;
+            this.numInputBox.BackColor = System.Drawing.SystemColors.Window;
+            this.numInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.numInputBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numInputBox.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.numInputBox.Location = new System.Drawing.Point(12, 409);
+            this.numInputBox.Margin = new System.Windows.Forms.Padding(4);
+            this.numInputBox.Name = "NumInputBox";
+            this.numInputBox.Size = new System.Drawing.Size(167, 26);
+            this.numInputBox.TabIndex = 0;
             // 
             // returnBtn
             // 
@@ -174,7 +174,7 @@
             this.Controls.Add(this.InputIsTotalSizeCheckBox);
             this.Controls.Add(this.diamondStartBtn);
             this.Controls.Add(this.returnBtn);
-            this.Controls.Add(this.NumInputBox);
+            this.Controls.Add(this.numInputBox);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -187,7 +187,7 @@
 
         #endregion
 
-        private TextBox NumInputBox;
+        private TextBox numInputBox;
         private Button returnBtn;
         private Button diamondStartBtn;
         private CheckBox InputIsTotalSizeCheckBox;

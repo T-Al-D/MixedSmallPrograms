@@ -109,6 +109,7 @@
             this.clearBtn.TabIndex = 15;
             this.clearBtn.Text = "clear listBox";
             this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // startBtn
             // 
@@ -159,9 +160,9 @@
             this.secondMethodCheckBox.ForeColor = System.Drawing.SystemColors.Window;
             this.secondMethodCheckBox.Location = new System.Drawing.Point(12, 320);
             this.secondMethodCheckBox.Name = "secondMethodCheckBox";
-            this.secondMethodCheckBox.Size = new System.Drawing.Size(280, 46);
+            this.secondMethodCheckBox.Size = new System.Drawing.Size(289, 46);
             this.secondMethodCheckBox.TabIndex = 17;
-            this.secondMethodCheckBox.Text = "if this box is checked, the nd Method\r\nis active, else the first Method !";
+            this.secondMethodCheckBox.Text = "if this box is checked, the 2nd Method\r\nis active, else the 1st Method !";
             this.secondMethodCheckBox.UseVisualStyleBackColor = false;
             // 
             // HotNColdView
