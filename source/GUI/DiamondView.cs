@@ -11,14 +11,14 @@ namespace GUI
         string _stringRow { get; set; } = "";
         public DiamondView() => InitializeComponent();
 
-        void returnBtn_Click(object sender, EventArgs e)
+        void ReturnBtn_Click(object sender, EventArgs e)
         {
             var startView = new StartView();
             startView.Show();
             Visible = false;
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
             //Important to properly close the Application and close all Threads
             Application.ExitThread();
@@ -26,13 +26,13 @@ namespace GUI
             Environment.Exit(0);
         }
 
-        void diamondStartBtn_Click(object sender, EventArgs e)
+        void StartBtn_Click(object sender, EventArgs e)
         {
-            _diamondSize = Check.CheckValidNumber(numInputBox.Text);
+            _diamondSize = Check.CheckValidNumber(NumInputBox.Text);
 
             if (_diamondSize > -1 && _diamondSize < 43)
             {
-                numInputBox.Text = "";
+                NumInputBox.Text = "";
 
                 if (InputIsTotalSizeCheckBox.Checked)
                 {
@@ -61,13 +61,13 @@ namespace GUI
             else
             {
                 MessageBox.Show("Input has to be a valid positive Number in the given range!");
-                numInputBox.Clear();
+                NumInputBox.Clear();
             }
         }
 
         void RoutineAfterRow()
         {
-            diamodListBox.Items.Add(_stringRow);
+            DiamodListBox.Items.Add(_stringRow);
             _stringRow = "";
         }
 
@@ -108,11 +108,6 @@ namespace GUI
                 _stringRow = StringCreator.AddEmptySpaces(_stringRow, emptySpaces);
                 _stringRow = StringCreator.FillStringWithSubStrings(_stringRow, _buildingBlock, drawCharsInColumn);
 
-
-                //for (int column = 0; column < drawCharsInColumn; column++)
-                //    _stringRow = $"{_stringRow}{_buildingBlock}";
-
-
                 RoutineAfterRow();
                 drawCharsInColumn -= steps;
                 emptySpaces += steps;
@@ -122,6 +117,17 @@ namespace GUI
             RoutineAfterRow();
         }
 
-        void clearBtn_Click(object sender, EventArgs e) => diamodListBox.Items.Clear();
+        void ClearBtn_Click(object sender, EventArgs e) => DiamodListBox.Items.Clear();
+
+        private new void KeyUp(object sender, KeyEventArgs e)
+        {
+            e.Handled = true;
+            e.SuppressKeyPress = true;
+            if (((char)e.KeyData) == ((char)Keys.Enter))
+            {
+                StartBtn.Focus();
+                StartBtn.PerformClick();
+            }
+        }
     }
 }

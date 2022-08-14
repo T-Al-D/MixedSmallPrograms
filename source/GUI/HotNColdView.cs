@@ -10,14 +10,14 @@ namespace GUI
 
         public HotNColdView() => InitializeComponent();
 
-        void returnBtn_Click(object sender, EventArgs e)
+        void ReturnBtn_Click(object sender, EventArgs e)
         {
             var startView = new StartView();
             startView.Show();
             Visible = false;
         }
 
-        void exitBtn_Click(object sender, EventArgs e)
+        void ExitBtn_Click(object sender, EventArgs e)
         {
             // Important to properly close the Application and close all Threads
             Application.ExitThread();
@@ -25,14 +25,16 @@ namespace GUI
             Environment.Exit(0);
         }
 
-        private int GetValidUserInputWithinBounds(int lowerBound, int upperBound)
+        int GetValidUserInputWithinBounds(int lowerBound, int upperBound)
         {
-            int guessedNumber = Check.CheckValidNumber(numInputBox.Text);
+            var guessedNumber = Check.CheckValidNumber(NumInputBox.Text);
+
             if (guessedNumber < lowerBound || guessedNumber > upperBound || guessedNumber == int.MinValue)
             {
                 MessageBox.Show(" Please input valid input between the given bounds!");
-                numInputBox.Text = "";
+                NumInputBox.Text = "";
             }
+
             return guessedNumber;
         }
 
@@ -64,8 +66,63 @@ namespace GUI
             return newBound;
         }
 
+        void StartGuessingGame()
+        {
+            var lowerBound = 0;
+            var upperBound = 100;
+            int prevGuessedNum, nextGuessedNum;
 
-        private void MainGuessingGame(int prevGuessedNum, int nextGuessedNum, int lowerBound, int upperBound)
+            // (valid) input
+            if (!SecondMethodCheckBox.Checked)
+            {
+                _goalNum = Check.CheckValidNumber(NumInputBox.Text);
+            }
+            else
+            {
+                _goalNum = NumCreator.GetRandomNumWithinBound(0, 100);
+            }
+
+            if (_goalNum > -1 && _goalNum < 101)
+            {
+                if (!SecondMethodCheckBox.Checked)
+                {
+                    ActionLbl.Text = "Computer will guess number!";
+
+                    do
+                    {
+                        prevGuessedNum = (short)NumCreator.GetRandomNumWithinBound(lowerBound, upperBound);
+                        nextGuessedNum = (short)NumCreator.GetRandomNumWithinBound(lowerBound, upperBound);
+                    } while (prevGuessedNum == nextGuessedNum);
+                }
+                else
+                {
+                    // TODO
+                    ActionLbl.Text = "Please input your 1st guess !";
+                    prevGuessedNum = GetValidUserInputWithinBounds(0, 101);
+                    ActionLbl.Text = "Please input your 2nd guess !";
+                    nextGuessedNum = GetValidUserInputWithinBounds(0, 101);
+
+                    if (prevGuessedNum == nextGuessedNum)
+                    {
+                        MessageBox.Show("Both guesses have to be different values!");
+                        NumInputBox.Text = "";
+                        return;
+                    }
+                }
+
+                HotNColdListBox.Items.Add($"First guess: {prevGuessedNum} !");
+                HotNColdListBox.Items.Add($"Second guess: {nextGuessedNum} !");
+
+                MainGuessingGame(prevGuessedNum, nextGuessedNum, lowerBound, upperBound);
+            }
+            else
+            {
+                MessageBox.Show("Input is not within the given bounds!");
+                NumInputBox.Clear();
+            }
+        }
+
+        void MainGuessingGame(int prevGuessedNum, int nextGuessedNum, int lowerBound, int upperBound)
         {
             // in case the golNumber got guessed in the first guess
             if (prevGuessedNum != _goalNum)
@@ -106,12 +163,13 @@ namespace GUI
                     }
 
                     // routine that has to be done regardless
-                    hotNColdListBox.Items.Add(_stringRow);
-                    hotNColdListBox.Items.Add($"Next Number between {lowerBound} and {upperBound} !");
+                    HotNColdListBox.Items.Add(_stringRow);
+                    HotNColdListBox.Items.Add($"Next Number between {lowerBound} and {upperBound} !");
                     _stringRow = "";
                     rounds++;
                     prevGuessedNum = nextGuessedNum;
-                    if (!secondMethodCheckBox.Checked)
+
+                    if (!SecondMethodCheckBox.Checked)
                     {
                         nextGuessedNum = NumCreator.GetRandomNumWithinBound(lowerBound, upperBound);
                     }
@@ -122,71 +180,29 @@ namespace GUI
                 }
 
                 _stringRow = $" The goalNumber was guessed in {rounds} Rounds!";
-                hotNColdListBox.Items.Add(_stringRow);
-                hotNColdListBox.Items.Add("");
+                HotNColdListBox.Items.Add(_stringRow);
+                HotNColdListBox.Items.Add("");
             }
             else
             {
-                hotNColdListBox.Items.Add("Lucky, first guess was the goalNumber!");
+                HotNColdListBox.Items.Add("Lucky, first guess was the goalNumber!");
             }
         }
 
         // this method mostly checks if the beginning values are correct or else the MainGuessingGame will not even start
-        void startBtn_Click(object sender, EventArgs e)
+        void StartBtn_Click(object sender, EventArgs e) => StartGuessingGame();
+
+        void ClearBtn_Click(object sender, EventArgs e) => HotNColdListBox.Items.Clear();
+
+        private new void KeyUp(object sender, KeyEventArgs e)
         {
-            int lowerBound = 0;
-            int upperBound = 100;
-            int prevGuessedNum, nextGuessedNum;
-
-            // (valid) input
-            if (!secondMethodCheckBox.Checked)
+            e.Handled = true;
+            e.SuppressKeyPress = true;
+            if (((char)e.KeyData) == ((char)Keys.Enter))
             {
-                _goalNum = Check.CheckValidNumber(numInputBox.Text);
-            }
-            else
-            {
-                _goalNum = NumCreator.GetRandomNumWithinBound(0, 100);
-            }
-
-            if (_goalNum > -1 && _goalNum < 101)
-            {
-                if (!secondMethodCheckBox.Checked)
-                {
-                    actionLbl.Text = "Computer will guess number!";
-                    do
-                    {
-                        prevGuessedNum = (short)NumCreator.GetRandomNumWithinBound(lowerBound, upperBound);
-                        nextGuessedNum = (short)NumCreator.GetRandomNumWithinBound(lowerBound, upperBound);
-                    } while (prevGuessedNum == nextGuessedNum);
-                }
-                else
-                {
-
-                    actionLbl.Text = "Please input your 1st guess !";
-                    prevGuessedNum = GetValidUserInputWithinBounds(0, 101);
-                    actionLbl.Text = "Please input your 2nd guess !";
-                    nextGuessedNum = GetValidUserInputWithinBounds(0, 101);
-
-                    if (prevGuessedNum == nextGuessedNum)
-                    {
-                        MessageBox.Show("Both guesses have to be different values!");
-                        numInputBox.Text = "";
-                        return;
-                    }
-                }
-
-                hotNColdListBox.Items.Add($"First guess: {prevGuessedNum} !");
-                hotNColdListBox.Items.Add($"First guess: {nextGuessedNum} !");
-
-                MainGuessingGame(prevGuessedNum, nextGuessedNum, lowerBound, upperBound);
-            }
-            else
-            {
-                MessageBox.Show("Input is not within the given bounds!");
-                numInputBox.Clear();
+                StartBtn.Focus();
+                StartBtn.PerformClick();
             }
         }
-
-        void clearBtn_Click(object sender, EventArgs e) => hotNColdListBox.Items.Clear();
     }
 }

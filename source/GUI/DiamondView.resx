@@ -57,7 +57,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="diamondInstructionLbl.Text" xml:space="preserve">
+  <data name="DiamondInstructionLbl.Text" xml:space="preserve">
     <value>Explanation: Input a number and the
  programm is going to draw a diamond shape.
 Please check the box if the input is the total

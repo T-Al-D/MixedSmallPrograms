@@ -7,7 +7,7 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void exitBtn_Click(object sender, EventArgs e)
+        private void ExitBtn_Click(object sender, EventArgs e)
         {
             //Important to properly close the Application and close all Threads
             Application.ExitThread();
@@ -15,14 +15,14 @@ namespace GUI
             Environment.Exit(0);
         }
 
-        private void diamondBtn_Click(object sender, EventArgs e)
+        private void DiamondBtn_Click(object sender, EventArgs e)
         {
             DiamondView diamondView = new DiamondView();
             diamondView.Show();
             Visible = false;
         }
 
-        private void hotNColdBtn_Click(object sender, EventArgs e)
+        private void HotNColdBtn_Click(object sender, EventArgs e)
         {
             HotNColdView hotNColdView = new HotNColdView();
             hotNColdView.Show();

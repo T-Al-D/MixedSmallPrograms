@@ -29,155 +29,157 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotNColdView));
-            this.exitBtn = new System.Windows.Forms.Button();
-            this.returnBtn = new System.Windows.Forms.Button();
-            this.hotNColdListBox = new System.Windows.Forms.ListBox();
-            this.explanationLbl = new System.Windows.Forms.Label();
-            this.clearBtn = new System.Windows.Forms.Button();
-            this.startBtn = new System.Windows.Forms.Button();
-            this.numInputBox = new System.Windows.Forms.TextBox();
-            this.explanation2 = new System.Windows.Forms.Label();
-            this.secondMethodCheckBox = new System.Windows.Forms.CheckBox();
-            this.actionLbl = new System.Windows.Forms.Label();
+            this.ExitBtn = new System.Windows.Forms.Button();
+            this.ReturnBtn = new System.Windows.Forms.Button();
+            this.HotNColdListBox = new System.Windows.Forms.ListBox();
+            this.ExplanationLbl1 = new System.Windows.Forms.Label();
+            this.ClearBtn = new System.Windows.Forms.Button();
+            this.StartBtn = new System.Windows.Forms.Button();
+            this.NumInputBox = new System.Windows.Forms.TextBox();
+            this.ExplanationLbl2 = new System.Windows.Forms.Label();
+            this.SecondMethodCheckBox = new System.Windows.Forms.CheckBox();
+            this.ActionLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // exitBtn
+            // ExitBtn
             // 
-            this.exitBtn.BackColor = System.Drawing.Color.Red;
-            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exitBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.exitBtn.FlatAppearance.BorderSize = 3;
-            this.exitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exitBtn.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.exitBtn.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.exitBtn.Location = new System.Drawing.Point(147, 12);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(68, 38);
-            this.exitBtn.TabIndex = 10;
-            this.exitBtn.Text = "EXIT";
-            this.exitBtn.UseVisualStyleBackColor = false;
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.ExitBtn.BackColor = System.Drawing.Color.Red;
+            this.ExitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitBtn.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ExitBtn.FlatAppearance.BorderSize = 3;
+            this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitBtn.Font = new System.Drawing.Font("Cambria", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.ExitBtn.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.ExitBtn.Location = new System.Drawing.Point(147, 12);
+            this.ExitBtn.Name = "ExitBtn";
+            this.ExitBtn.Size = new System.Drawing.Size(68, 38);
+            this.ExitBtn.TabIndex = 10;
+            this.ExitBtn.Text = "EXIT";
+            this.ExitBtn.UseVisualStyleBackColor = false;
+            this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
             // 
-            // returnBtn
+            // ReturnBtn
             // 
-            this.returnBtn.BackColor = System.Drawing.Color.MistyRose;
-            this.returnBtn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
-            this.returnBtn.FlatAppearance.BorderSize = 3;
-            this.returnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.returnBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.returnBtn.ForeColor = System.Drawing.Color.Red;
-            this.returnBtn.Location = new System.Drawing.Point(12, 12);
-            this.returnBtn.Name = "returnBtn";
-            this.returnBtn.Size = new System.Drawing.Size(115, 38);
-            this.returnBtn.TabIndex = 9;
-            this.returnBtn.Text = "<- Go Back !";
-            this.returnBtn.UseVisualStyleBackColor = false;
-            this.returnBtn.Click += new System.EventHandler(this.returnBtn_Click);
+            this.ReturnBtn.BackColor = System.Drawing.Color.MistyRose;
+            this.ReturnBtn.FlatAppearance.BorderColor = System.Drawing.Color.Maroon;
+            this.ReturnBtn.FlatAppearance.BorderSize = 3;
+            this.ReturnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReturnBtn.Font = new System.Drawing.Font("Cambria", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.ReturnBtn.ForeColor = System.Drawing.Color.Red;
+            this.ReturnBtn.Location = new System.Drawing.Point(12, 12);
+            this.ReturnBtn.Name = "ReturnBtn";
+            this.ReturnBtn.Size = new System.Drawing.Size(115, 38);
+            this.ReturnBtn.TabIndex = 9;
+            this.ReturnBtn.Text = "<- Go Back !";
+            this.ReturnBtn.UseVisualStyleBackColor = false;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // hotNColdListBox
+            // HotNColdListBox
             // 
-            this.hotNColdListBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.hotNColdListBox.FormattingEnabled = true;
-            this.hotNColdListBox.ItemHeight = 19;
-            this.hotNColdListBox.Location = new System.Drawing.Point(483, 12);
-            this.hotNColdListBox.Name = "hotNColdListBox";
-            this.hotNColdListBox.Size = new System.Drawing.Size(367, 498);
-            this.hotNColdListBox.TabIndex = 11;
+            this.HotNColdListBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.HotNColdListBox.FormattingEnabled = true;
+            this.HotNColdListBox.ItemHeight = 19;
+            this.HotNColdListBox.Location = new System.Drawing.Point(483, 12);
+            this.HotNColdListBox.Name = "HotNColdListBox";
+            this.HotNColdListBox.Size = new System.Drawing.Size(367, 498);
+            this.HotNColdListBox.TabIndex = 11;
             // 
-            // explanationLbl
+            // ExplanationLbl1
             // 
-            this.explanationLbl.AutoSize = true;
-            this.explanationLbl.BackColor = System.Drawing.Color.Navy;
-            this.explanationLbl.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.explanationLbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.explanationLbl.Location = new System.Drawing.Point(12, 68);
-            this.explanationLbl.Name = "explanationLbl";
-            this.explanationLbl.Size = new System.Drawing.Size(440, 88);
-            this.explanationLbl.TabIndex = 12;
-            this.explanationLbl.Text = " 1st Method: give the Computer a number to guess !\r\n2nd Method: computer gives nu" +
+            this.ExplanationLbl1.AutoSize = true;
+            this.ExplanationLbl1.BackColor = System.Drawing.Color.Navy;
+            this.ExplanationLbl1.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExplanationLbl1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ExplanationLbl1.Location = new System.Drawing.Point(12, 68);
+            this.ExplanationLbl1.Name = "ExplanationLbl1";
+            this.ExplanationLbl1.Size = new System.Drawing.Size(440, 88);
+            this.ExplanationLbl1.TabIndex = 12;
+            this.ExplanationLbl1.Text = " 1st Method: give the Computer a number to guess !\r\n2nd Method: computer gives nu" +
     "mber und you have to guess!\r\nIf you contine with the 2nd Method you can first cl" +
     "ick start\r\nwithout number input.";
             // 
-            // clearBtn
+            // ClearBtn
             // 
-            this.clearBtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.clearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.clearBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.clearBtn.FlatAppearance.BorderSize = 3;
-            this.clearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clearBtn.Location = new System.Drawing.Point(208, 477);
-            this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(139, 33);
-            this.clearBtn.TabIndex = 15;
-            this.clearBtn.Text = "clear listBox";
-            this.clearBtn.UseVisualStyleBackColor = false;
-            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            this.ClearBtn.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.ClearBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ClearBtn.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.ClearBtn.FlatAppearance.BorderSize = 3;
+            this.ClearBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ClearBtn.Location = new System.Drawing.Point(208, 477);
+            this.ClearBtn.Name = "ClearBtn";
+            this.ClearBtn.Size = new System.Drawing.Size(139, 33);
+            this.ClearBtn.TabIndex = 15;
+            this.ClearBtn.Text = "clear listBox";
+            this.ClearBtn.UseVisualStyleBackColor = false;
+            this.ClearBtn.Click += new System.EventHandler(this.ClearBtn_Click);
             // 
-            // startBtn
+            // StartBtn
             // 
-            this.startBtn.BackColor = System.Drawing.Color.Honeydew;
-            this.startBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.startBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.startBtn.FlatAppearance.BorderSize = 3;
-            this.startBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.startBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.startBtn.ForeColor = System.Drawing.Color.DarkGreen;
-            this.startBtn.Location = new System.Drawing.Point(12, 477);
-            this.startBtn.Name = "startBtn";
-            this.startBtn.Size = new System.Drawing.Size(167, 33);
-            this.startBtn.TabIndex = 14;
-            this.startBtn.Text = "input and start";
-            this.startBtn.UseVisualStyleBackColor = false;
-            this.startBtn.Click += new System.EventHandler(this.startBtn_Click);
+            this.StartBtn.BackColor = System.Drawing.Color.Honeydew;
+            this.StartBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StartBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.StartBtn.FlatAppearance.BorderSize = 3;
+            this.StartBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.StartBtn.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.StartBtn.ForeColor = System.Drawing.Color.DarkGreen;
+            this.StartBtn.Location = new System.Drawing.Point(12, 477);
+            this.StartBtn.Name = "StartBtn";
+            this.StartBtn.Size = new System.Drawing.Size(167, 33);
+            this.StartBtn.TabIndex = 14;
+            this.StartBtn.Text = "input and start";
+            this.StartBtn.UseVisualStyleBackColor = false;
+            this.StartBtn.Click += new System.EventHandler(this.StartBtn_Click);
             // 
-            // numInputBox
+            // NumInputBox
             // 
-            this.numInputBox.BackColor = System.Drawing.SystemColors.Window;
-            this.numInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numInputBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numInputBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.numInputBox.Location = new System.Drawing.Point(12, 422);
-            this.numInputBox.Margin = new System.Windows.Forms.Padding(4);
-            this.numInputBox.Name = "numInputBox";
-            this.numInputBox.Size = new System.Drawing.Size(167, 27);
-            this.numInputBox.TabIndex = 13;
+            this.NumInputBox.BackColor = System.Drawing.SystemColors.Window;
+            this.NumInputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NumInputBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumInputBox.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.NumInputBox.Location = new System.Drawing.Point(12, 422);
+            this.NumInputBox.Margin = new System.Windows.Forms.Padding(4);
+            this.NumInputBox.MaxLength = 6;
+            this.NumInputBox.Name = "NumInputBox";
+            this.NumInputBox.Size = new System.Drawing.Size(167, 27);
+            this.NumInputBox.TabIndex = 13;
+            this.NumInputBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyUp);
             // 
-            // explanation2
+            // ExplanationLbl2
             // 
-            this.explanation2.AutoSize = true;
-            this.explanation2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.explanation2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.explanation2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.explanation2.Location = new System.Drawing.Point(12, 172);
-            this.explanation2.Name = "explanation2";
-            this.explanation2.Size = new System.Drawing.Size(296, 22);
-            this.explanation2.TabIndex = 16;
-            this.explanation2.Text = "Please input number between 0 an 100 !";
+            this.ExplanationLbl2.AutoSize = true;
+            this.ExplanationLbl2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.ExplanationLbl2.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ExplanationLbl2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ExplanationLbl2.Location = new System.Drawing.Point(12, 172);
+            this.ExplanationLbl2.Name = "ExplanationLbl2";
+            this.ExplanationLbl2.Size = new System.Drawing.Size(296, 22);
+            this.ExplanationLbl2.TabIndex = 16;
+            this.ExplanationLbl2.Text = "Please input number between 0 an 100 !";
             // 
-            // secondMethodCheckBox
+            // SecondMethodCheckBox
             // 
-            this.secondMethodCheckBox.AutoSize = true;
-            this.secondMethodCheckBox.BackColor = System.Drawing.Color.DarkOrchid;
-            this.secondMethodCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.secondMethodCheckBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.secondMethodCheckBox.Location = new System.Drawing.Point(12, 339);
-            this.secondMethodCheckBox.Name = "secondMethodCheckBox";
-            this.secondMethodCheckBox.Size = new System.Drawing.Size(289, 46);
-            this.secondMethodCheckBox.TabIndex = 17;
-            this.secondMethodCheckBox.Text = "if this box is checked, the 2nd Method\r\nis active, else the 1st Method !";
-            this.secondMethodCheckBox.UseVisualStyleBackColor = false;
+            this.SecondMethodCheckBox.AutoSize = true;
+            this.SecondMethodCheckBox.BackColor = System.Drawing.Color.DarkOrchid;
+            this.SecondMethodCheckBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SecondMethodCheckBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.SecondMethodCheckBox.Location = new System.Drawing.Point(12, 339);
+            this.SecondMethodCheckBox.Name = "SecondMethodCheckBox";
+            this.SecondMethodCheckBox.Size = new System.Drawing.Size(289, 46);
+            this.SecondMethodCheckBox.TabIndex = 17;
+            this.SecondMethodCheckBox.Text = "if this box is checked, the 2nd Method\r\nis active, else the 1st Method !";
+            this.SecondMethodCheckBox.UseVisualStyleBackColor = false;
             // 
-            // actionLbl
+            // ActionLbl
             // 
-            this.actionLbl.AutoSize = true;
-            this.actionLbl.BackColor = System.Drawing.Color.Blue;
-            this.actionLbl.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.actionLbl.ForeColor = System.Drawing.Color.White;
-            this.actionLbl.Location = new System.Drawing.Point(12, 238);
-            this.actionLbl.Name = "actionLbl";
-            this.actionLbl.Size = new System.Drawing.Size(102, 19);
-            this.actionLbl.TabIndex = 18;
-            this.actionLbl.Text = "Next Action ...";
+            this.ActionLbl.AutoSize = true;
+            this.ActionLbl.BackColor = System.Drawing.Color.Blue;
+            this.ActionLbl.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ActionLbl.ForeColor = System.Drawing.Color.White;
+            this.ActionLbl.Location = new System.Drawing.Point(12, 238);
+            this.ActionLbl.Name = "ActionLbl";
+            this.ActionLbl.Size = new System.Drawing.Size(102, 19);
+            this.ActionLbl.TabIndex = 18;
+            this.ActionLbl.Text = "Next Action ...";
             // 
             // HotNColdView
             // 
@@ -185,16 +187,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Indigo;
             this.ClientSize = new System.Drawing.Size(867, 523);
-            this.Controls.Add(this.actionLbl);
-            this.Controls.Add(this.secondMethodCheckBox);
-            this.Controls.Add(this.explanation2);
-            this.Controls.Add(this.clearBtn);
-            this.Controls.Add(this.startBtn);
-            this.Controls.Add(this.numInputBox);
-            this.Controls.Add(this.explanationLbl);
-            this.Controls.Add(this.hotNColdListBox);
-            this.Controls.Add(this.exitBtn);
-            this.Controls.Add(this.returnBtn);
+            this.Controls.Add(this.ActionLbl);
+            this.Controls.Add(this.SecondMethodCheckBox);
+            this.Controls.Add(this.ExplanationLbl2);
+            this.Controls.Add(this.ClearBtn);
+            this.Controls.Add(this.StartBtn);
+            this.Controls.Add(this.NumInputBox);
+            this.Controls.Add(this.ExplanationLbl1);
+            this.Controls.Add(this.HotNColdListBox);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.ReturnBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HotNColdView";
             this.Text = "HotNColdView";
@@ -205,15 +207,15 @@
 
         #endregion
 
-        private Button exitBtn;
-        private Button returnBtn;
-        private ListBox hotNColdListBox;
-        private Label explanationLbl;
-        private Button clearBtn;
-        private Button startBtn;
-        private TextBox numInputBox;
-        private Label explanation2;
-        private CheckBox secondMethodCheckBox;
-        private Label actionLbl;
+        private Button ExitBtn;
+        private Button ReturnBtn;
+        private ListBox HotNColdListBox;
+        private Label ExplanationLbl1;
+        private Button ClearBtn;
+        private Button StartBtn;
+        private TextBox NumInputBox;
+        private Label ExplanationLbl2;
+        private CheckBox SecondMethodCheckBox;
+        private Label ActionLbl;
     }
 }
